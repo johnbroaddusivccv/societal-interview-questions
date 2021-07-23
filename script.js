@@ -105,3 +105,24 @@ console.log(min(18, 11))
 // output
 //  11
 // =================================================================
+
+// Recursion
+// Zero is even, one is odd, for any other number n, its evenness is the same as n-2
+// Define a recursive function isEven corresponding to this description
+// The function should accept a single parameter (a positive, whole number) and return a boolean.
+// Test it on 50 and 75
+// See how it behaves on -1
+// Why? can you think of a way to fix this?
+
+function isEven(n) {
+  if (n == 0) {
+    return true
+  } else if (n == 1) {
+    return false
+  } else {
+    return isEven(n - 2)
+  }
+}
+
+// The call stack is overflowed when I add a third isEven...
+console.log(isEven(50), isEven(75))
