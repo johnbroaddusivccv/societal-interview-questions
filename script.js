@@ -92,3 +92,16 @@ console.log(board)
 //  # # # #
 // # # # #
 // =================================================================
+
+// min function
+// Write a function min that takes in two arguments and then returns their minimum
+function min(a, b) {
+  return Math.min(a, b)
+}
+
+console.log(min(18, 11))
+
+// =================================================================
+// output
+//  11
+// =================================================================
