@@ -114,15 +114,27 @@ console.log(min(18, 11))
 // See how it behaves on -1
 // Why? can you think of a way to fix this?
 
-function isEven(n) {
+function isEvenFirst(n) {
   if (n == 0) {
     return true
   } else if (n == 1) {
     return false
+  } else if (-n > 0) {
+    return null
   } else {
-    return isEven(n - 2)
+    return isEvenFirst(n - 2)
   }
 }
 
-// The call stack is overflowed when I add a third isEven...
-console.log(isEven(50), isEven(75))
+console.log(isEvenFirst(50), isEvenFirst(75), isEvenFirst(-1))
+
+function isEvenSecond(a) {
+  if (a == 0) {
+    return true
+  } else {
+    return -a % 2 == 0 ? true : false
+  }
+  return isEvenSecond(a - 2)
+}
+
+console.log(isEvenSecond(50), isEvenSecond(75), isEvenSecond(-2))
