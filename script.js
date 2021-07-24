@@ -128,6 +128,11 @@ function isEvenFirst(n) {
 
 console.log(isEvenFirst(50), isEvenFirst(75), isEvenFirst(-1))
 
+// =================================================================
+// output
+//  true false null
+// =================================================================
+
 function isEvenSecond(a) {
   if (a == 0) {
     return true
@@ -137,4 +142,9 @@ function isEvenSecond(a) {
   return isEvenSecond(a - 2)
 }
 
-console.log(isEvenSecond(50), isEvenSecond(75), isEvenSecond(-2))
+console.log(isEvenSecond(50), isEvenSecond(75), isEvenSecond(-1))
+
+// =================================================================
+// output
+//  true false false
+// =================================================================
