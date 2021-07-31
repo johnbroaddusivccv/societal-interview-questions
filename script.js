@@ -153,13 +153,46 @@ console.log(isEvenSecond(50), isEvenSecond(75), isEvenSecond(-1))
 // Write a function countsBs that takes a string as its only argument
 // and returns a number that indicates how many uppcase "B" Characters there are in the string
 
+// This is giving output of B found and There was no B found
 function countBs(str) {
-for(let i = 0; i <= str.length; i++) {
-console.log(str)
-if(str[i] == "B") {
-console.log("B found")
-} else {
-console.log("there was no B found")
+  for (let i = 0; i <= str.length; i++) {
+    if (str[i] == 'B') {
+      console.log('B found')
+    } else {
+      console.log('there was no B found')
+    }
+  }
 }
-} 
+
+// This is giving output of zero
+
+function countBs(str) {
+  for (let i = 0; i <= str.length; i++) {
+    if (str.indexOf('B') > -1) {
+      return str[i]
+    } else if (str.indexOf(str[i]) !== 'B') {
+      return "No B's"
+    }
+  }
+}
+
+// This is giving output of where the B is located in the loop
+function loopString(str) {
+  for (let i = 0; i <= str.length; i++) {
+    console.log(str[i])
+    if (str[i] == 'B') {
+      return (i += ' B')
+    }
+  }
+}
+
+// output 0
+function loopString(str) {
+  for (let i = 0; i <= str.length; i++) {
+    console.log(str[i])
+    let theB = 'B'
+    if (str[i] == theB) {
+      return theB.indexOf('B')
+    }
+  }
 }
