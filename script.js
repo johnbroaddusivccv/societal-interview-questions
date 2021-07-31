@@ -148,3 +148,18 @@ console.log(isEvenSecond(50), isEvenSecond(75), isEvenSecond(-1))
 // output
 //  true false false
 // =================================================================
+
+// Bean Counting
+// Write a function countsBs that takes a string as its only argument
+// and returns a number that indicates how many uppcase "B" Characters there are in the string
+
+function countBs(str) {
+for(let i = 0; i <= str.length; i++) {
+console.log(str)
+if(str[i] == "B") {
+console.log("B found")
+} else {
+console.log("there was no B found")
+}
+} 
+}
