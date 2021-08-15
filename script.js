@@ -200,11 +200,38 @@ function loopString(str) {
 
 // Fixed the findB's function
 
-function loopString(str) {
+function countBs(str) {
   let counter = 0
   for (let i = 0; i <= str.length; i++) {
     if (str[i] == 'B') {
       counter++
+    }
+  }
+  return counter
+}
+
+// Count B's short hand
+function countDrac(string, ch) {
+  let counted = 0
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == ch) {
+      counted += 1
+    }
+  }
+  return counted
+}
+function countBz(string) {
+  return countDrac(string, 'B')
+}
+
+// countChar
+function countChar(str, a) {
+  let counter = 0
+  for (let i = 0; i <= str.length; i++) {
+    if (str[i] == a) {
+      counter++
+    } else if (str == '') {
+      return counter
     }
   }
   return counter
