@@ -188,6 +188,7 @@ function loopString(str) {
 
 // output 0
 function loopString(str) {
+  let counter = 0
   for (let i = 0; i <= str.length; i++) {
     console.log(str[i])
     let theB = 'B'
@@ -195,4 +196,16 @@ function loopString(str) {
       return theB.indexOf('B')
     }
   }
+}
+
+// Fixed the findB's function
+
+function loopString(str) {
+  let counter = 0
+  for (let i = 0; i <= str.length; i++) {
+    if (str[i] == 'B') {
+      counter++
+    }
+  }
+  return counter
 }
