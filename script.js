@@ -164,42 +164,14 @@ function countBs(str) {
   }
 }
 
-// This is giving output of zero
-
-function countBs(str) {
-  for (let i = 0; i <= str.length; i++) {
-    if (str.indexOf('B') > -1) {
-      return str[i]
-    } else if (str.indexOf(str[i]) !== 'B') {
-      return "No B's"
-    }
-  }
-}
+// Next write a function countChar that behaves like countBs,
+// Except it takes a second argument that indicates the character
+// that is it to be counted (Rather than only counting the uppercase "B")
+// Rewrite countBs to make use of this new function
 
 // This is giving output of where the B is located in the loop
-function loopString(str) {
-  for (let i = 0; i <= str.length; i++) {
-    console.log(str[i])
-    if (str[i] == 'B') {
-      return (i += ' B')
-    }
-  }
-}
 
-// output 0
-function loopString(str) {
-  let counter = 0
-  for (let i = 0; i <= str.length; i++) {
-    console.log(str[i])
-    let theB = 'B'
-    if (str[i] == theB) {
-      return theB.indexOf('B')
-    }
-  }
-}
-
-// Fixed the findB's function
-
+// My CountB's function
 function countBs(str) {
   let counter = 0
   for (let i = 0; i <= str.length; i++) {
@@ -210,7 +182,20 @@ function countBs(str) {
   return counter
 }
 
-// Count B's short hand
+// My countChar function
+function countChar(str, a) {
+  let counter = 0
+  for (let i = 0; i <= str.length; i++) {
+    if (str[i] == a) {
+      counter++
+    } else if (str == '') {
+      return counter
+    }
+  }
+  return counter
+}
+
+// Count B's short hand solution
 function countDrac(string, ch) {
   let counted = 0
   for (let i = 0; i < string.length; i++) {
@@ -224,15 +209,7 @@ function countBz(string) {
   return countDrac(string, 'B')
 }
 
-// countChar
-function countChar(str, a) {
-  let counter = 0
-  for (let i = 0; i <= str.length; i++) {
-    if (str[i] == a) {
-      counter++
-    } else if (str == '') {
-      return counter
-    }
-  }
-  return counter
-}
+// =================================================================
+// output
+//  `Depends on input...`
+// =================================================================
